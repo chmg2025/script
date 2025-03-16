@@ -11,13 +11,13 @@
 
 [Script]
 # 会员
-http-response ^https:\/\/[^\/]+\.cloudfront\.net\/api\/user\/base\/info script-path=https://js.xxbai.workers.dev/ydm.js, requires-body=true, timeout=60, tag=会员
+http-response ^https:\/\/[^\/]+\.cloudfront\.net\/api\/user\/base\/info script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/ydm.js, requires-body=true, timeout=60, tag=会员
 # 金币
-http-response ^https:\/\/[^\/]+\.cloudfront\.net\/api\/video\/getVideoById script-path=https://js.xxbai.workers.dev/ydm.js, requires-body=true, timeout=60, tag=金币
+http-response ^https:\/\/[^\/]+\.cloudfront\.net\/api\/video\/getVideoById script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/ydm.js, requires-body=true, timeout=60, tag=金币
 # 社区
-http-response ^https:\/\/[^\/]+\.cloudfront\.net\/api\/community\/dynamic\/dynamicInfo script-path=https://js.xxbai.workers.dev/ydm.js, requires-body=true, timeout=60, tag=社区
+http-response ^https:\/\/[^\/]+\.cloudfront\.net\/api\/community\/dynamic\/dynamicInfo script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/ydm.js, requires-body=true, timeout=60, tag=社区
 # 播放
-http-response ^https:\/\/[^\/]+\.cloudfront\.net\/api\/m3u8\/decode\/authPath script-path=https://js.xxbai.workers.dev/ydm.js, requires-body=true, timeout=60, tag=播放
+http-response ^https:\/\/[^\/]+\.cloudfront\.net\/api\/m3u8\/decode\/authPath script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/ydm.js, requires-body=true, timeout=60, tag=播放
 
 [MITM]
 hostname = *.cloudfront.net
