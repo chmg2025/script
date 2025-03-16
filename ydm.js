@@ -23,7 +23,7 @@ http-response ^https:\/\/[^\/]+\.cloudfront\.net\/api\/m3u8\/decode\/authPath sc
 hostname = *.cloudfront.net
 ***********************************/
 
-
+let $ = new Env('猫狗视频')
 
 
 
