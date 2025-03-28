@@ -25,7 +25,7 @@ http-response ^https:\/\/[^\/]+\.(cloudfront\.net|pxyzjmspfl\.work)\/api\/commun
 
 
 [MITM]
-hostname = *.cloudfront.net
+hostname = *.cloudfront.net, *.pxyzjmspfl.work
 ***********************************/
 
 
