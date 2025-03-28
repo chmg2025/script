@@ -28,7 +28,7 @@ http-response ^https:\/\/[^\/]+\.(cloudfront\.net|pxyzjmspfl\.work)\/api\/commun
 hostname = *.cloudfront.net, *.pxyzjmspfl.work
 ***********************************/
 
-
+let $ = new Env('猫狗视频')
 
 
 
