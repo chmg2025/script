@@ -4,7 +4,6 @@
  #!author=小白
  #!date=2025-04-09
 
-
  [Script]
  # 会员
  http-response https://d1skbu98kuldnf.cloudfront.net/api/app/user/info script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/mdsp.js, requires-body=true, timeout=60, tag=会员
