@@ -9,8 +9,8 @@
 #!date=2025-03-15
 
 [Rule]
-USER-AGENT,"KWPlayer*",PROXY
-DOMAIN-SUFFIX,kuwo.cn,PROXY
+USER-AGENT,"KWPlayer*",DIRECT
+DOMAIN-SUFFIX,kuwo.cn,DIRECT
 
 [URL Rewrite]
 ^.*?(ad(.*)?\.tencentmusic\.com|kuwo\.cn\/((EcomResource|(Mobile)?Ad)Serv(er|ice)|(vip|(open)?api)?\/v\d\/(user\/freeMode|album\/adBar|app\/(newMenuList\/menuListInfo|pasterAdvert\/config)|api\/advert\/(iListen|album)|operate\/pop\/info|-online\/sign\/new\/playEntryV1-)|kuwopay\/vip-tab\/page\/floatbox)) - reject-200
