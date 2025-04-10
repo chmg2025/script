@@ -1,7 +1,7 @@
 #!name=麻豆视频
 #!desc=去广告解锁视频(支持Surge和Shadowrocket)
 #!author=小白
-#!date=2025-04-09
+#!date=2025-04-10
 
 [Script]
 会员 = type=http-response, pattern=https://d1skbu98kuldnf.cloudfront.net/api/app/user/info, script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/md.js, requires-body=true, timeout=60
