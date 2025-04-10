@@ -4,11 +4,11 @@
 #!date=2025-04-09
 
 [Script]
-会员 = type=http-response, pattern=https://d1skbu98kuldnf.cloudfront.net/api/app/user/info, script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/mdsp.js, requires-body=true, timeout=60
+会员 = type=http-response, pattern=https://d1skbu98kuldnf.cloudfront.net/api/app/user/info, script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/md.js, requires-body=true, timeout=60
 
-视频 = type=http-response, pattern=https://d1skbu98kuldnf.cloudfront.net/api/app/media/play, script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/mdsp.js, requires-body=true, timeout=60
+视频 = type=http-response, pattern=https://d1skbu98kuldnf.cloudfront.net/api/app/media/play, script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/md.js, requires-body=true, timeout=60
 
-广告 = type=http-response, pattern=https://d1skbu98kuldnf.cloudfront.net/(api/app/ping/config|api/app/media/v5/home), script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/mdsp.js, requires-body=true, timeout=60
+广告 = type=http-response, pattern=https://d1skbu98kuldnf.cloudfront.net/(api/app/ping/config|api/app/media/v5/home), script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/md.js, requires-body=true, timeout=60
 
 [MITM]
 hostname = %APPEND% *.cloudfront.net
