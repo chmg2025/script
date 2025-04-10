@@ -1,0 +1,18 @@
+/***********************************
+ #!name=麻豆视频
+ #!desc=去广告解锁视频
+ #!author=小白
+ #!date=2025-04-09
+
+ [rewrite_local]
+ # 会员
+ https://d1skbu98kuldnf.cloudfront.net/api/app/user/info url script-response-body https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/mdsp.js
+ # 视频
+ https://d1skbu98kuldnf.cloudfront.net/api/app/media/play url script-response-body https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/mdsp.js
+ # 广告
+ https://d1skbu98kuldnf.cloudfront.net/(api/app/ping/config|api/app/media/v5/home) url script-response-body https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/mdsp.js
+
+
+ [mitm]
+ hostname = *.cloudfront.net
+ ***********************************/
