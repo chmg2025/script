@@ -3,6 +3,7 @@
  #!desc=去广告解锁视频
  #!author=小白
  #!date=2025-04-09
+ #!openUrl= https://d1skbu98kuldnf.cloudfront.net/home
 
  [Script]
  # 会员
