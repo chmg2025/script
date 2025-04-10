@@ -7,6 +7,10 @@
 # 广告
 ^https:\/\/[^\/]+\.(cloudfront\.net|pxyzjmspfl\.work)\/api\/(sys\/partner\/list|activity\/indexActs|sys\/advertisement\/list|sys\/getImgAndVideoCdnList|aibox\/entranceConfig) data-type=text data=" " status-code=200
 
+[URL Rewrite]
+# 广告
+^https:\/\/[^\/]+\.(cloudfront\.net|pxyzjmspfl\.work)\/api\/(sys\/partner\/list|activity\/indexActs|sys\/advertisement\/list|sys\/getImgAndVideoCdnList|aibox\/entranceConfig) - reject-200
+
 [Script]
 # 会员
 会员 = type=http-response, pattern=^https:\/\/[^\/]+\.(cloudfront\.net|pxyzjmspfl\.work)\/api\/user\/base\/info, script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/mg.js, requires-body=true, timeout=60
