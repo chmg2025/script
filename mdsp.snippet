@@ -3,16 +3,17 @@
  #!desc=去广告解锁视频
  #!author=小白
  #!date=2025-04-09
+ #!openUrl= https://d1skbu98kuldnf.cloudfront.net/home
 
- [rewrite_local]
+ [Script]
  # 会员
- https://d1skbu98kuldnf.cloudfront.net/api/app/user/info url script-response-body https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/md.js
+ http-response https://d1skbu98kuldnf.cloudfront.net/api/app/user/info script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/md.js, requires-body=true, timeout=60, tag=会员
  # 视频
- https://d1skbu98kuldnf.cloudfront.net/api/app/media/play url script-response-body https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/md.js
+ http-response https://d1skbu98kuldnf.cloudfront.net/api/app/media/play script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/md.js, requires-body=true, timeout=60, tag=视频
  # 广告
- https://d1skbu98kuldnf.cloudfront.net/(api/app/ping/config|api/app/media/v5/home) url script-response-body https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/md.js
+ http-response https://d1skbu98kuldnf.cloudfront.net/(api/app/ping/config|api/app/media/v5/home) script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/md.js, requires-body=true, timeout=60, tag=广告
 
 
- [mitm]
+ [MITM]
  hostname = *.cloudfront.net
  ***********************************/
