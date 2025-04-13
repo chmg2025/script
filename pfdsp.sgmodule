@@ -1,0 +1,14 @@
+#!name=泡芙短视频
+#!desc=去广告全解锁(支持Surge和Shadowrocket)
+#!author=小白
+#!date=2025-04-13
+
+[Script]
+广告 = type=http-response, pattern=https://(jnhb8y79.com|d5flxjpige3b9.cloudfront.net)/api/app/ping/domain/h5, script-path=https://vip.chmg2025.ip-ddns.com/pfdsp.js, requires-body=true, timeout=60
+
+会员 = type=http-response, pattern=https://(jnhb8y79.com|d5flxjpige3b9.cloudfront.net)/api/app/mine/info, script-path=https://vip.chmg2025.ip-ddns.com/pfdsp.js, requires-body=true, timeout=60
+
+视频 = type=http-response, pattern=^https:\/\/(jnhb8y79\.com|d5flxjpige3b9\.cloudfront\.net)\/api\/app\/vid\/info\?data=.*$, script-path=https://vip.chmg2025.ip-ddns.com/pfdsp.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% jnhb8y79.com, *.cloudfront.net
