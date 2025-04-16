@@ -1,7 +1,7 @@
 
 /***********************************
  #!name=65看
- #!desc=去广告解锁视频测试
+ #!desc=去广告解锁视频
  #!author=小白
  #!date=2025-04-16
 
@@ -13,8 +13,6 @@
  [Script]
  # 会员
  http-response ^https://sm-api\.xuezhumall\.com/api/users/profile\?* script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/65kan.js, requires-body=true, timeout=60, tag=会员
- # 视频
- http-response ^https:\/\/[a-z0-9\-]+(?:\.[a-z0-9\-]+)*\.xyz(?::\d+)?\/video-details\/\d+(?:\?.*)?$ script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/65kan.js, requires-body=true, timeout=60, tag=视频
  # 广告
  http-response ^https://sm-api\.xuezhumall\.com/api/common_ads\?* script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/65kan.js, requires-body=true, timeout=60, tag=广告
 
@@ -36,17 +34,6 @@ let key = {
         1595448326
     ],
     "sigBytes": 16
-}
-if (url.indexOf('/video-details/') !== -1){
-    let r = /window\.CONFIG\s*=\s*['"]([^'"]+)['"]/
-    let o = body.match(r)
-    let json = JSON.parse(decryptAES_CBC(o[1]))
-    json.site.is_video_ads = 0
-    json.site.paid_movie_trial_time = 9999
-    delete json.site.ad_tj
-    let CONFIG = encryptAES_CBC(JSON.stringify(json))
-    body = body.replace(/window\.CONFIG\s*=\s*['"]([^'"]+)['"]/, "window.CONFIG = '"  + CONFIG + "'")
-    $.done({body : body})
 }
 
 if (url.indexOf('/api/common_ads') !== -1) {
