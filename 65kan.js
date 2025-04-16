@@ -12,11 +12,11 @@
 
  [Script]
  # 会员
- http-response ^https://sm-api\.xuezhumall\.com/api/users/profile\?* script-path=https://vip.chmg2025.ip-ddns.com/65kan.js, requires-body=true, timeout=60, tag=会员
+ http-response ^https://sm-api\.xuezhumall\.com/api/users/profile\?* script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/65kan.js, requires-body=true, timeout=60, tag=会员
  # 视频
- http-response ^https:\/\/[a-z0-9\-]+(?:\.[a-z0-9\-]+)*\.xyz(?::\d+)?\/video-details\/\d+(?:\?.*)?$ script-path=https://vip.chmg2025.ip-ddns.com/65kan.js, requires-body=true, timeout=60, tag=视频
+ http-response ^https:\/\/[a-z0-9\-]+(?:\.[a-z0-9\-]+)*\.xyz(?::\d+)?\/video-details\/\d+(?:\?.*)?$ script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/65kan.js, requires-body=true, timeout=60, tag=视频
  # 广告
- http-response ^https://sm-api\.xuezhumall\.com/api/common_ads\?* script-path=https://vip.chmg2025.ip-ddns.com/65kan.js, requires-body=true, timeout=60, tag=广告
+ http-response ^https://sm-api\.xuezhumall\.com/api/common_ads\?* script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/65kan.js, requires-body=true, timeout=60, tag=广告
 
 
  [MITM]
