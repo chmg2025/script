@@ -2,7 +2,7 @@
 #!name=猫狗视频
 #!desc=去广告解锁视频(支持LOON和圈X)
 #!author=小白
-#!date=2025-03-27
+#!date=2025-04-17
 解锁站点如下: 
 https://dd38dkt7dfvyr.cloudfront.net
 https://d3lijns9322mkl.cloudfront.net
@@ -10,6 +10,7 @@ https://d2x03a61ogs2x5.cloudfront.net
 https://d1xwta4tq724e9.cloudfront.net
 https://d19mjemvonf47c.cloudfront.net
 https://snerbnew.pxyzjmspfl.work
+新增地址: https://d11rd8m1pg017m.cloudfront.net
 [Rewrite]
 # 广告
 ^https:\/\/[^\/]+\.(cloudfront\.net|pxyzjmspfl\.work)\/api\/(sys\/partner\/list|activity\/indexActs|sys\/advertisement\/list|sys\/getImgAndVideoCdnList|aibox\/entranceConfig) - reject-200
