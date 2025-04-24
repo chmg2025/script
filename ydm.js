@@ -10,7 +10,8 @@ https://d2x03a61ogs2x5.cloudfront.net
 https://d1xwta4tq724e9.cloudfront.net
 https://d19mjemvonf47c.cloudfront.net
 https://snerbnew.pxyzjmspfl.work
-新增地址: https://d11rd8m1pg017m.cloudfront.net
+https://d11rd8m1pg017m.cloudfront.net
+新增地址: https://df1dkslnws674.cloudfront.net
 [Rewrite]
 # 广告
 ^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq)\.work)\/api\/(sys\/partner\/list|activity\/indexActs|sys\/advertisement\/list|sys\/getImgAndVideoCdnList|aibox\/entranceConfig) - reject-200
