@@ -4,14 +4,14 @@
 #!author=小白
 #!date=2025-04-23
 解锁站点如下: 
-https://dd38dkt7dfvyr.cloudfront.net
-变更站点:https://gy2025.rnuozrryfq.work
-https://d2x03a61ogs2x5.cloudfront.net
-https://d1xwta4tq724e9.cloudfront.net
-https://d19mjemvonf47c.cloudfront.net
-https://snerbnew.pxyzjmspfl.work
-https://d11rd8m1pg017m.cloudfront.net
-新增地址: https://df1dkslnws674.cloudfront.net
+YDM: https://dd38dkt7dfvyr.cloudfront.net
+MGQ: https://gy2025.rnuozrryfq.work
+DeepSeek: https://d2x03a61ogs2x5.cloudfront.net
+MLS: https://d1xwta4tq724e9.cloudfront.net
+JJ: https://d19mjemvonf47c.cloudfront.net
+3N2B: https://snerbnew.pxyzjmspfl.work
+UUSP: https://d11rd8m1pg017m.cloudfront.net
+91YM: https://df1dkslnws674.cloudfront.net
 [Rewrite]
 # 广告
 ^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq)\.work)\/api\/(sys\/partner\/list|activity\/indexActs|sys\/advertisement\/list|sys\/getImgAndVideoCdnList|aibox\/entranceConfig) - reject-200
