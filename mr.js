@@ -3,7 +3,7 @@
  #!desc=去广告解锁视频(支持Quantumult X 和 LOON)
  #!author=小白
  #!date=2025-05-20
-
+ #!openUrl = https://d2kz22zwxc5env.cloudfront.net/
 
  [Script]
  # 会员
