@@ -1,0 +1,15 @@
+#!name=Mr.好色
+#!desc=去广告解锁视频(支持Shadowrocket 和 Surge)
+#!author=小白
+#!date=2025-05-21
+#!openUrl=https://d2kz22zwxc5env.cloudfront.net/
+
+[Script]
+会员 = type=http-response, pattern=https://(3e8qs.com|(d2m18pn7x0p3im|d27nudycn51u9q).cloudfront.net)/api/app/mine/info, script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/mr.js, requires-body=true, timeout=60
+
+视频 = type=http-response, pattern=^https:\/\/(3e8qs\.com|(d2m18pn7x0p3im|d27nudycn51u9q)\.cloudfront\.net)\/api\/app\/vid\/info\?data=.*$, script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/mr.js, requires-body=true, timeout=60
+
+广告 = type=http-response, pattern=https://(3e8qs.com|(d2m18pn7x0p3im|d27nudycn51u9q).cloudfront.net)/api/app/ping/domain/h5, script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/mr.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% 3e8qs.com, *.cloudfront.net
