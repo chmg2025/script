@@ -7,7 +7,7 @@
 
  [Script]
  # 会员
- http-response https://(cpmg23|3e8qs).com|[^\/]+\.cloudfront.net)/api/app/mine/info script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/mr.js, requires-body=true, timeout=60, tag=会员
+ http-response https://((cpmg23|3e8qs).com|[^\/]+\.cloudfront.net)/api/app/mine/info script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/mr.js, requires-body=true, timeout=60, tag=会员
  # 视频
  http-response ^https:\/\/((cpmg23|3e8qs)\.com|[^\/]+\.cloudfront\.net)\/api\/app\/vid\/info\?data=.*$ script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/mr.js, requires-body=true, timeout=60, tag=视频
  # 广告
