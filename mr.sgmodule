@@ -2,9 +2,9 @@
 #!desc=去广告解锁视频(支持Shadowrocket, Surge自行测试)
 #!author=小白
 #!date=2025-06-09
-#!openUrl=https://d2kz22zwxc5env.cloudfront.net/
-#!openUrl=https://dlqrowpypqqsg.cloudfront.net/
-#!openUrl=https://pfhfzs.com/
+Mr先生:      https://d2kz22zwxc5env.cloudfront.net/
+xvideos社区: https://dlqrowpypqqsg.cloudfront.net/
+泡芙短视频:   https://pfhfzs.com/
 
 [Script]
 会员 = type=http-response, pattern=^https:\/\/([a-z0-9-]+\.cloudfront\.net|7yhgyt\.com|jnhb8y79\.com|ql2u9\.com|3e8qs\.com|cpmg23\.com)\/api\/app\/mine\/info$, script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/mr.js, requires-body=true, timeout=60

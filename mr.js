@@ -3,9 +3,10 @@
  #!desc=去广告解锁视频(支持Quantumult X 和 LOON)
  #!author=小白
  #!date=2025-06-09
- #!openUrl=https://d2kz22zwxc5env.cloudfront.net/
- #!openUrl=https://dlqrowpypqqsg.cloudfront.net/
- #!openUrl=https://pfhfzs.com/
+ #!comment=复制以下链接手动打开：
+ Mr先生:      https://d2kz22zwxc5env.cloudfront.net/
+ xvideos社区: https://dlqrowpypqqsg.cloudfront.net/
+ 泡芙短视频:   https://pfhfzs.com/
 
  [Script]
  # 会员
