@@ -1,5 +1,5 @@
 /***********************************
- #!name=Mr先生 + xvideos社区 + 泡芙短视频 + tiktok免费版
+ #!name=Mr先生 + xvideos社区 + 泡芙短视频 + tiktok免费版 + 海角社区
  #!desc=去广告解锁视频(支持Quantumult X 和 LOON)
  #!author=小白
  #!date=2025-06-13
