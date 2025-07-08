@@ -3,7 +3,7 @@
  #!desc=解锁VIP及金币视频
  #!author=小白
  #!date=2025-07-08
- #!openurl=www.zimuquan.top
+ #!openurl=https://www.zimuquan.top
 
  [Script]
  # 字母圈
