@@ -1,25 +1,25 @@
 #!name= YDM系列通杀
 #!desc=去广告解锁视频(支持Surge和Shadowrocket)
 #!author=小白
-#!date=2025-05-05
+#!date=2025-07-10
 
 [Map Local]
 # 广告
-^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw)\.work)\/api\/(sys\/partner\/list|activity\/indexActs|sys\/advertisement\/list|sys\/getImgAndVideoCdnList|aibox\/entranceConfig) data-type=text data=" " status-code=200
+^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw|h6b7f5t4n)\.work)\/api\/(sys\/partner\/list|activity\/indexActs|sys\/advertisement\/list|sys\/getImgAndVideoCdnList|aibox\/entranceConfig) data-type=text data=" " status-code=200
 
 [URL Rewrite]
 # 广告
-^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw)\.work)\/api\/(sys\/partner\/list|activity\/indexActs|sys\/advertisement\/list|sys\/getImgAndVideoCdnList|aibox\/entranceConfig) - reject-200
+^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw|h6b7f5t4n)\.work)\/api\/(sys\/partner\/list|activity\/indexActs|sys\/advertisement\/list|sys\/getImgAndVideoCdnList|aibox\/entranceConfig) - reject-200
 
 [Script]
 # 会员
-会员 = type=http-response, pattern=^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw)\.work)\/api\/user\/base\/info, script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60
+会员 = type=http-response, pattern=^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw|h6b7f5t4n)\.work)\/api\/user\/base\/info, script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60
 
 # 视频
-视频 = type=http-response, pattern=^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw)\.work)\/api\/video\/getVideoById, script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60
+视频 = type=http-response, pattern=^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw|h6b7f5t4n)\.work)\/api\/video\/getVideoById, script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60
 
 # 社区
-社区 = type=http-response, pattern=^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw)\.work)\/api\/community\/dynamic\/dynamicInfo, script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60
+社区 = type=http-response, pattern=^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw|h6b7f5t4n)\.work)\/api\/community\/dynamic\/dynamicInfo, script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60
 
 [MITM]
-hostname = %APPEND% *.cloudfront.net, *.pxyzjmspfl.work, *.rnuozrryfq.work, *.looufegitw.work
+hostname = %APPEND% *.cloudfront.net, *.pxyzjmspfl.work, *.rnuozrryfq.work, *.looufegitw.work, *.h6b7f5t4n.work
