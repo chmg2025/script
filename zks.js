@@ -2,7 +2,7 @@
  #!name=足控社
  #!desc=解锁VIP(支持Quantumult X 和 Loon)
  #!author=小白
- #!date=2025-07-03
+ #!date=2025-07-12 
  #!openUrl = https://20521.zks01.shop/
  [Script]
  http-response ^https?:\/\/.+\/appapi\/(detail|buyPicture|getUserInfo|goldBuyVideo)\/  script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/zks.js, requires-body=true, timeout=60, tag=足控社
