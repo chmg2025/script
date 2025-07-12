@@ -13,6 +13,7 @@ UUSP: https://d11rd8m1pg017m.cloudfront.net
 3N2B: https://snerbnew.pxyzjmspfl.work
 MGQ:  https://aw0702.x5t5d5a4c.work/
 BZSP: https://fyb1.looufegitw.work
+MXBC: https://jsj5191.h6b7f5t4n.work/
 [Rewrite]
 # 广告
 ^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw|h6b7f5t4n|x5t5d5a4c|djfrhyhtuo)\.work)\/api\/(sys\/partner\/list|activity\/indexActs|sys\/advertisement\/list|sys\/getImgAndVideoCdnList|aibox\/entranceConfig) - reject-200
