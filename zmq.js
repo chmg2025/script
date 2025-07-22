@@ -2,7 +2,7 @@
  #!name=字母圈
  #!desc=解锁VIP及金币视频
  #!author=小白
- #!date=2025-07-09
+ #!date=2025-07-23
  #!openurl=https://www.zimuquan.top
 
  [Script]
@@ -11,5 +11,5 @@
 
 
  [MITM]
- hostname = zimuquan.top, *.zimuquan.top, *.zimuquan3.top, *.zimuquan10.uk
+ hostname = zimuquan.top, *.zimuquan.top, *.zimuquan3.top, *.zimuquan10.uk, *.zimuquan12.uk
  ***********************************/
