@@ -11,5 +11,5 @@
 
 
  [MITM]
- hostname = zimuquan.top, *.zimuquan.top, *.zimuquan3.top, *.zimuquan10.uk, *.zimuquan12.uk
+ hostname = zimuquan.top, *.zimuquan.top, *.zimuquan3.top, *.zimuquan10.uk, *.zimuquan12.uk, www.zimuquan14.uk
  ***********************************/
