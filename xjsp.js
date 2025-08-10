@@ -5,8 +5,8 @@
 
 [Script]
 
-http-response https:\/\/wap7\.(lvshenyun|shwcwy|yishenji|dawowen|muchangdian|duyipo)\.(com|cn)\/ucp\/index(\?.*)? script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/xjsp.js, requires-body=true, timeout=60, tag=会员
-http-request https:\/\/wap7\.(lvshenyun|shwcwy|yishenji|dawowen|muchangdian|duyipo)\.(com|cn)\/(v2\/)?(vod|minivod)\/reqplay\/\d+(\?.*)? script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/xjsp.js, requires-body=true, timeout=60, tag=视频
+http-response https:\/\/(wap7|mjapi4)\.(lvshenyun|shwcwy|yishenji|dawowen|muchangdian|duyipo)\.(com|cn)\/ucp\/index(\?.*)? script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/xjsp.js, requires-body=true, timeout=60, tag=会员
+http-request https:\/\/(wap7|mjapi4)\.(lvshenyun|shwcwy|yishenji|dawowen|muchangdian|duyipo)\.(com|cn)\/(v2\/)?(vod|minivod)\/reqplay\/\d+(\?.*)? script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/xjsp.js, requires-body=true, timeout=60, tag=视频
 [MITM]
 hostname = *.lvshenyun.com, *.shwcwy.com, *.yishenji.com, *.dawowen.com, *.muchangdian.com, *.duyipo.com, *.busss.cn
 ***********************************/
