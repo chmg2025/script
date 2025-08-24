@@ -2,7 +2,7 @@
 #!name= YDM系列通杀
 #!desc=去广告解锁视频(支持LOON和圈X)
 #!author=小白
-#!date=2025-07-19
+#!date=2025-08-24
 解锁站点如下: 
 DeepSeek: https://d2x03a61ogs2x5.cloudfront.net
 YDM:  https://dd38dkt7dfvyr.cloudfront.net
