@@ -6,8 +6,8 @@
 
 
  [Rewrite]
- ^https://hm-img\.(xuezhumall|gycss)\.(com|cn)/videos/(\d{6})\/(\d{2})\/(\d+)/preview\.m3u8$ header https://hm-img.gycss.cn/videos/$1/$2/$3/index.m3u8
- ^https://hm-img\.(xuezhumall|gycss)\.(com|cn)/videos/(\d{6})\/(\d{2})\/(\d+)/preview\.m3u8$ url 302 https://hm-img.gycss.cn/videos/$1/$2/$3/index.m3u8
+ ^https?:\/\/hm-img\.gycss\.cn\/videos\/(.*)\/preview\.m3u8$ header https://hm-img.gycss.cn/videos/$1/index.m3u8
+ ^https?:\/\/hm-img\.gycss\.cn\/videos\/(.*)\/preview\.m3u8$ url 302 https://hm-img.gycss.cn/videos/$1/index.m3u8
 
  [Script]
  # 会员
