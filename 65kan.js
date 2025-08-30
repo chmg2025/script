@@ -45,8 +45,8 @@ if (url.indexOf('/api/common_ads') !== -1) {
 if (url.indexOf('/api/users/profile') !== -1){
     let data = JSON.parse(body)
     let json = JSON.parse(decryptAES_CBC(data["x-data"]))
-    json.data.user.name = '小白解锁'
-    json.data.user.username = '小白解锁'
+    json.data.user.name = '联合国儿童基金会'
+    json.data.user.username = '联合国儿童基金会'
     json.data.user.vip_type = 5
     json.data.user.vip_deadline = '2099-12-01T00:00:00'
     json.data.user.forbidden_vip_deadline = '2099-12-01T00:00:00'
