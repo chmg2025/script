@@ -17,7 +17,7 @@
 
 
  [MITM]
- hostname = *.xuezhumall.com, gycss.cn
+ hostname = *.xuezhumall.com, *.gycss.cn
  ***********************************/
 
 let $ = new Env('65看片')
