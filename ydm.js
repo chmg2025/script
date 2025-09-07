@@ -1,7 +1,7 @@
 /***********************************
 #!name= YDM系列通杀
 #!desc=去广告解锁视频(支持LOON和圈X)
-#!date=2025-08-26
+#!date=2025-09-07
 解锁站点如下: 
 DeepSeek: https://d2x03a61ogs2x5.cloudfront.net
 YDM:  https://dd38dkt7dfvyr.cloudfront.net
@@ -25,7 +25,8 @@ http-response ^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufeg
 http-response ^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw|h6b7f5t4n|x5t5d5a4c|djfrhyhtuo|di3tqhecp)\.(work|xyz))\/api\/video\/getVideoById script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60, tag=视频
 # 社区
 http-response ^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw|h6b7f5t4n|x5t5d5a4c|djfrhyhtuo|di3tqhecp)\.(work|xyz))\/api\/community\/dynamic\/dynamicInfo script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60, tag=社区
-
+# 列表
+http-request ^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw|h6b7f5t4n|x5t5d5a4c|djfrhyhtuo|di3tqhecp)\.(work|xyz))\/api\/video\/(classify\/classifyList|classifyList) script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60, tag=列表
 
 [MITM]
 hostname = *.cloudfront.net, *.pxyzjmspfl.work, *.rnuozrryfq.work, *.looufegitw.work, *.h6b7f5t4n.work, *.x5t5d5a4c.work, *.djfrhyhtuo.work, *.gtlxb.work, *.di3tqhecp.xyz
