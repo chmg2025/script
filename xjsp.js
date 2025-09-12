@@ -1,14 +1,14 @@
 /***********************************
 #!name=香蕉视频
 #!desc=解锁VIP及视频(广告未处理)
-#!date=2025-08-11
+#!date=2025-09-12
 
 [Script]
 
-http-response https:\/\/(wap7|mjapi4)\.(lvshenyun|shwcwy|yishenji|dawowen|muchangdian|duyipo)\.(com|cn)\/ucp\/index(\?.*)? script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/xjsp.js, requires-body=true, timeout=60, tag=会员
-http-response https:\/\/(wap7|mjapi4)\.(lvshenyun|shwcwy|yishenji|dawowen|muchangdian|duyipo)\.(com|cn)\/(v2\/)?(vod|minivod)\/reqplay\/\d+(\?.*)? script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/xjsp.js, requires-body=true, timeout=60, tag=视频
+http-response https://h5.xxoo137.org\.(com|org)\/api\/ucp\/index(\?.*)? script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/xjsp.js, requires-body=true, timeout=60, tag=会员
+http-response https://h5.xxoo137.org/api/(v2/vod/reqplay|vod/reqplay)\/\d+(\?.*)? script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/xjsp.js, requires-body=true, timeout=60, tag=视频
 [MITM]
-hostname = *.lvshenyun.com, *.shwcwy.com, *.yishenji.com, *.dawowen.com, *.muchangdian.com, *.duyipo.com, *.busss.cn
+hostname = *.xxoo137.org
 ***********************************/
 
 
