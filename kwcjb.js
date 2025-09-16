@@ -8,7 +8,7 @@
  # 酷我纯净版
 http-response http://vip1.kuwo.cn/vip/v2/user/vip script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/kwcjb.js, requires-body=true, timeout=60, tag=会员
 
-http-request http://nmobi.kuwo.cn/mobi.s?f=kuwo&q= script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/kwcjb.js, requires-body=true, timeout=60, tag=播放
+http-request ^http?:\/\/nmobi\.kuwo\.cn\/mobi\.s\?f=kuwo&q= script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/kwcjb.js, requires-body=true, timeout=60, tag=播放
 
 [MITM]
 hostname = *.kuwo.cn
