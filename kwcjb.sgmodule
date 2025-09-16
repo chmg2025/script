@@ -1,0 +1,12 @@
+#!name=酷我纯净版
+#!desc=解锁VIP及歌曲(仅支持纯净版)
+#!icon=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Kuwo.png
+#!date=2025-09-16
+
+[Script]
+会员 = type=http-response, pattern=http://vip1.kuwo.cn/vip/v2/user/vip, script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/kwcjb.js, requires-body=true, timeout=60
+
+播放 = type=http-request, pattern=^http?:\/\/nmobi\.kuwo\.cn\/mobi\.s\?f=kuwo&q=, script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/kwcjb.js, requires-body=true, timeout=60
+
+[MITM]
+hostname = %APPEND% *.kuwo.cn
