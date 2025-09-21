@@ -1,7 +1,6 @@
 /***********************************
  #!name=麻豆视频 + 快手萝莉
  #!desc=去广告解锁视频(支持LOON和圈X)
- #!author=小白
  #!date=2025-09-21
  #!openUrl= https://d1skbu98kuldnf.cloudfront.net/home
 
