@@ -26,7 +26,7 @@ http-response ^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufeg
 # 社区
 http-response ^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw|h6b7f5t4n|x5t5d5a4c|djfrhyhtuo|gtlxb|di3tqhecp|nd3rg3uox|mvxygdq38|yix0akf0)\.(work|xyz))\/api\/community\/dynamic\/dynamicInfo script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60, tag=社区
 # 列表
-http-request ^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw|h6b7f5t4n|x5t5d5a4c|djfrhyhtuo|gtlxb|di3tqhecp|nd3rg3uox|mvxygdq38|yix0akf0)\.(work|xyz))\/api\/video\/(classify\/classifyList|classifyList) script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60, tag=列表
+http-request ^https:\/\/[^\/]+\.(cloudfront\.net|(pxyzjmspfl|rnuozrryfq|looufegitw|h6b7f5t4n|x5t5d5a4c|djfrhyhtuo|gtlxb|di3tqhecp|nd3rg3uox|mvxygdq38|yix0akf0)\.(work|xyz))\/api\/video\/(classify\/classifyList|classifyList|hot\/list) script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60, tag=列表
 
 [MITM]
 hostname = *.cloudfront.net, *.pxyzjmspfl.work, *.rnuozrryfq.work, *.looufegitw.work, *.h6b7f5t4n.work, *.x5t5d5a4c.work, *.djfrhyhtuo.work, *.gtlxb.work, *.di3tqhecp.xyz, *.yix0akf0.work
