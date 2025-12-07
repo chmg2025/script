@@ -15,5 +15,5 @@
 
 
  [MITM]
- hostname = *.upwqjcun.cc, *.haijiaoc.com, *.xivjndn.xyz, *.wxav.cc
+ hostname = *.upwqjcun.cc, *.haijiaoc.com, *.xivjndn.xyz, *.wxav.cc,
  ***********************************/
