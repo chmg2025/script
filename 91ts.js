@@ -6,7 +6,7 @@
 
  [Script]
  # 广告
- http-response ^https:\/\/(api2\\.upwqjcun\\.cc|bak\\.haijiaoc\\.com|api2\\.xivjndn\\.xyz|wapi\.wxav\.cc)\/(api|api\.php\/api)\/(home\/getconfig|(tabnew|novel|porngame)\/.*|community\/topics|contents\/list_contents) script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/91ts.js, requires-body=true, timeout=60, tag=广告
+ http-response ^https:\/\/(api2\.upwqjcun\.cc|bak\.haijiaoc\.com|api2\.xivjndn\.xyz|wapi\.wxav\.cc)\/(api|api\.php\/api)\/(home\/getconfig|(tabnew|novel|porngame)\/.*|community\/topics|contents\/list_contents) script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/91ts.js, requires-body=true, timeout=60, tag=广告
  # 会员
  http-response https://(api2.upwqjcun.cc|bak.haijiaoc.com|api2.xivjndn.xyz|wapi.wxav.cc)/(api|api.php/api)/users/base_info script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/91ts.js, requires-body=true, timeout=60, tag=会员
  # 视频
