@@ -25,8 +25,8 @@
  IP-CIDR,111.206.99.202/32,REJECT,no-resolve
 
  [Script]
- http-response ^https?:\/\/.*\.kugou.com/(v1|v2|v3|v5|mobile|media.store\/v1|adp\/ad\/v1|ads.gateway/v2|fxsing\/vip\/user|sing7\/homepage\/json\/v3\/vip)\/(login_by_token|get_my_info|get_login_extend_info|vipinfoV2|url|get_res_privilege\/lite|mine_top_banner|task_center_entrance|info|tip) script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/kugouvip.js, requires-body=true, timeout=60, tag=酷狗
- http-response ^https?:\/\/gateway\.kugou\.com\/tracker\/v5\/url script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/refs/heads/main/kugouv5.js, requires-body=true, timeout=60, tag=酷狗V5
+ http-response ^https?:\/\/.*\.kugou.com/(v1|v2|v3|v5|mobile|media.store\/v1|adp\/ad\/v1|ads.gateway/v2|fxsing\/vip\/user|sing7\/homepage\/json\/v3\/vip)\/(login_by_token|get_my_info|get_login_extend_info|vipinfoV2|get_res_privilege\/lite|mine_top_banner|task_center_entrance|info|tip) script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/kugouvip.js, requires-body=true, timeout=60, tag=酷狗
+ http-response ^https?:\/\/gateway\.kugou\.com\/(v5|tracker\/v5)\/url script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/refs/heads/main/kugouv5.js, requires-body=true, timeout=60, tag=酷狗V5
 
  [MITM]
  hostname = *.kugou.com
