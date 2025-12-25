@@ -37,7 +37,7 @@
 let $ = new Env('酷狗音乐')
 let url = $request.url
 
-if (url.indexOf('v5/login_by_token') !== -1 || url.indexOf('v3/get_my_info') !== -1 || url.indexOf('mobile/vipinfoV2') !== -1 || url.indexOf('v2/get_login_extend_info') !== -1) {
+if (url.indexOf('v5/login_by_token') !== -1 || url.indexOf('v3/get_my_info') !== -1 || url.indexOf('mobile/vipinfoV2') !== -1 || url.indexOf('get_login_extend_info') !== -1) {
     let json = JSON.parse($response.body)
     json.data.is_vip = 1
     json.data.vip_type = 6
