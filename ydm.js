@@ -1,7 +1,7 @@
 /***********************************
 #!name= YDM系列通杀
 #!desc=去广告解锁视频(支持LOON和圈X)
-#!date=2025-12-04
+#!date=2026-01-02
 解锁站点如下: 
 DeepSeek: https://d2x03a61ogs2x5.cloudfront.net
 YDM:  https://dd38dkt7dfvyr.cloudfront.net
@@ -22,7 +22,7 @@ GGS:  https://ggs1.gtlxb.work
 # 会员
 http-response ^https:\/\/[^\/]+\.(cloudfront\.net|work|xyz)\/api\/user\/base\/info script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60, tag=会员
 # 视频
-http-response ^https:\/\/[^\/]+\.(cloudfront\.net|work|xyz)\/api\/video\/getVideoById script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60, tag=视频
+http-response ^https:\/\/[^\/]+\.(cloudfront\.net|work|xyz)\/api\/(video\/getVideoById|cinema\/getVideoDetail) script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60, tag=视频
 # 社区
 http-response ^https:\/\/[^\/]+\.(cloudfront\.net|work|xyz)\/api\/community\/dynamic\/dynamicInfo script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/ydm.js, requires-body=true, timeout=60, tag=社区
 # 列表
