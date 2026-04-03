@@ -1,7 +1,7 @@
 /***********************************
  #!name= 酷狗音乐
  #!desc= 解锁会员及歌曲(支持MAC+IPAD+IOS端)
- #!date= 2025-12-25
+ #!date= 2026-04-03
 
  [Rule]
  # > (广告/弹窗)
@@ -25,7 +25,7 @@
  IP-CIDR,111.206.99.202/32,REJECT,no-resolve
 
  [Script]
- http-response ^https?:\/\/.*\.kugou\.com\/(v1|v2|v3|v5|mobile|media.store\/v1|adp\/ad\/v1|ads.gateway/v2|fxsing\/vip\/user|sing7\/homepage\/json\/v3\/vip)\/(login_by_token|get_my_info|get_login_extend_info|vipinfoV2|get_res_privilege\/lite|mine_top_banner|task_center_entrance|info|tip) script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/kugouvip.js, requires-body=true, timeout=60, tag=酷狗
+ http-response ^https?:\/\/.*\.kugou\.com\/(v1|v2|v3|v5|mobile|media.store\/v1|adp\/ad\/v1|ads.gateway/v2|fxsing\/vip\/user|sing7\/homepage\/json\/v3\/vip)\/(login_by_token|get_my_info|get_login_extend_info|vipinfoV2|get_res_privilege\/lite|mine_top_banner|task_center_entrance|info|tip).* script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/kugouvip.js, requires-body=true, timeout=60, tag=酷狗
  http-response ^https?:\/\/.*\.kugou\.com\/(v5|tracker\/v5)\/url script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/refs/heads/main/kugouv5.js, requires-body=true, timeout=60, tag=酷狗V5
 
  [MITM]
@@ -34,89 +34,194 @@
 
 
 
-let $ = new Env('酷狗音乐')
-let url = $request.url
+let $ = new Env('酷狗音乐');
+let url = $request.url;
 
-if (url.indexOf('v5/login_by_token') !== -1 || url.indexOf('v3/get_my_info') !== -1 || url.indexOf('mobile/vipinfoV2') !== -1 || url.indexOf('get_login_extend_info') !== -1) {
-    let json = JSON.parse($response.body)
-    json.data.is_vip = 1
-    json.data.vip_type = 6
-    json.data.vip_begin_time = '2025-12-01 00:00:00'
-    json.data.vip_end_time = '2099-12-01 00:00:00'
-    json.data.listen_begin_time = '2025-12-01 00:00:00'
-    json.data.listen_end_time = '2099-12-01 00:00:00'
-    json.data.su_vip_begin_time = '2025-12-01 00:00:00'
-    json.data.su_vip_end_time = '2099-12-01 00:00:00'
-    json.data.su_vip_y_endtime = '2099-12-01 00:00:00'
-    json.data.user_type = 29
-    json.data.bookvip_valid = 1
-    json.data.bookvip_end_time = '2099-12-01 00:00:00'
-    json.data.roam_type = 1
-    json.data.roam_begin_time = '2025-12-01 00:00:00'
-    json.data.vip_token = '1234567890abcdef'
-    json.data.auth_token = '1234567890abcdef'
-    json.data.y_type = 1
-    json.data.m_type = 1
-    json.data.user_y_type = 1
-    json.data.m_begin_time = '2025-12-01 00:00:00'
-    json.data.m_end_time = '2099-12-01 00:00:00'
-    json.data.exp = 4099737600
-    json.data.t_expire_time = 4099737600
-    json.data.m_is_old = 1
-    json.data.svip_level = 9
-    json.data.svip_score = 9999
-    json.data.singvip_valid = 1
-    if (json.data.tone_info) {
-       json.data.tone_info.user_right_list.forEach((item) => (item.valid = true))
-       }
-    $.done({body: JSON.stringify(json)})
-} else if (url.indexOf('v1/get_res_privilege/lite') !== -1) {
-    let json = JSON.parse($response.body)
-    json.data[0].trans_param.musicpack_advance = 0
-    json.data[0].trans_param.display = 0
-    json.data[0].trans_param.display_rate = 0
-    json.data[0].trans_param.pay_block_tpl = 0
-    json.data[0].trans_param.free_limited = 0
-    json.data[0].trans_param.all_quality_free = 1
-    json.data[0].trans_param.download_privilege = 8
-    json.data[0].level = 0
-    json.data[0].status = 1
-    json.data[0].price = 0
-    json.data[0].buy_count = 1
-    json.data[0].pay_type = 0
-    json.data[0].buy_count_audios = 1
-    json.data[0].relate_goods.forEach((item) => (item.status = 1))
-    json.data[0].relate_goods.forEach((item) => (item.price = 0))
-    json.data[0].relate_goods.forEach((item) => (item.pay_type = 0))
-    json.data[0].relate_goods.forEach((item) => (item.popup = null))
-    if (json.userinfo){
-      json.userinfo.m_type = 1
-      json.userinfo.vip_type = 6
-      json.userinfo.vip_user_type = 3
-      json.userinfo.quota_remain = 999
-    }
-    json.vip_user_type = 3
-    json.appid_group = 0
-    $.done({body: JSON.stringify(json)})
-} else if (url.indexOf('v1/mine_top_banner') !== -1 || url.indexOf('v2/task_center_entrance') !== -1) {
-   let json = JSON.parse($response.body)
-   delete json.data.ads
-   $.done({body: JSON.stringify(json)})
-} else if (url.indexOf('vip/user/info') !== -1  || url.indexOf('json/v3/vip/tip') !== -1) {
-   let json = JSON.parse($response.body)
-   json.data.status = 1
-   json.data.vipLevel = 9
-   json.data.svip = 1
-   json.data.expireTime = 4099737600000
-   if (json.data.vipTips) {
-       json.data.vipTips[0].btnText = "SVIP已激活" 
-       json.data.vipTips[0].btnText = "尊贵SVIP 畅享所有特权"
-   }
-   $.done({body: JSON.stringify(json)})
-}  else {
-    $.log('未匹配')
-    $.done()
+/* ================= 工具函数 ================= */
+
+function getQueryParam(url, key) {
+  const m = url.match(new RegExp(`[?&]${key}=([^&]*)`));
+  return m ? m[1] : null;
 }
+
+function setVip(data) {
+  if (!data) return;
+
+  Object.assign(data, {
+    is_vip: 1,
+    vip_type: 6,
+    vip_begin_time: '2025-12-01 00:00:00',
+    vip_end_time: '2099-12-01 00:00:00',
+    listen_begin_time: '2025-12-01 00:00:00',
+    listen_end_time: '2099-12-01 00:00:00',
+    su_vip_begin_time: '2025-12-01 00:00:00',
+    su_vip_end_time: '2099-12-01 00:00:00',
+    su_vip_y_endtime: '2099-12-01 00:00:00',
+    roam_end_time: '2099-12-01 00:00:00',
+    m_y_endtime: '2099-12-01 00:00:00',
+    vip_y_endtime: '2099-12-01 00:00:00',
+    dual_su_vip_end_time: '2099-12-01 00:00:00',
+    user_type: 29,
+    bookvip_valid: 1,
+    bookvip_end_time: '2099-12-01 00:00:00',
+    roam_type: 1,
+    roam_begin_time: '2025-12-01 00:00:00',
+    vip_token: '1234567890abcdef',
+    auth_token: '1234567890abcdef',
+    y_type: 1,
+    m_type: 1,
+    user_y_type: 1,
+    m_begin_time: '2025-12-01 00:00:00',
+    m_end_time: '2099-12-01 00:00:00',
+    exp: 4099737600,
+    t_expire_time: 4099737600,
+    m_is_old: 1,
+    svip_level: 9,
+    svip_score: 9999,
+    singvip_valid: 1,
+    vipinfo: {
+      "bookvip_rankvip": [],
+      "user_type": 29,
+      "m_type": 1,
+      "su_vip_y_endtime": "2099-12-01 00:00:00",
+      "su_vip_clearday": "",
+      "user_y_type": 1,
+      "vip_type": 6,
+      "bookvip_valid": 1,
+      "su_vip_begin_time": "2026-02-15 07:10:14",
+      "svip_score": 9999,
+      "su_vip_end_time": "2099-12-01 00:00:00",
+      "y_type": 1,
+      "bookvip_end_time": "2099-12-01 00:00:00",
+      "svip_level": 9
+    },
+    busi_vip: [
+      {
+        "is_paid_vip": 1,
+        "latest_product_id": "",
+        "busi_type": "",
+        "purchased_ios_type": 1,
+        "vip_begin_time": "2026-02-15 07:10:14",
+        "paid_vip_expire_time": "2099-12-01 00:00:00",
+        "userid": 1559099801,
+        "purchased_type": 0,
+        "product_type": "",
+        "y_type": 1,
+        "is_vip": 1,
+        "vip_end_time": "2099-12-01 00:00:00"
+      }
+    ],
+  });
+
+  data.tone_info?.user_right_list?.forEach(i => i.valid = true);
+}
+
+/* ================= 登录 / 用户信息 ================= */
+
+if (
+  url.includes('v5/login_by_token') ||
+  url.includes('/get_my_info') ||
+  url.includes('/get_union_vip') ||
+  url.includes('mobile/vipinfoV2') ||
+  url.includes('mobile/vipinfo') ||
+  url.includes('/get_login_extend_info')
+) {
+  let json = JSON.parse($response.body || '{}');
+  setVip(json.data);
+  $.done({ body: JSON.stringify(json) });
+}
+
+/* ================= 资源权限 ================= */
+
+else if (url.includes('v1/get_res_privilege/lite')) {
+
+  let json = JSON.parse($response.body || '{}');
+  let item = json.data?.[0];
+
+  if (item?.trans_param) {
+    Object.assign(item.trans_param, {
+      musicpack_advance: 0,
+      display: 0,
+      display_rate: 0,
+      pay_block_tpl: 0,
+      free_limited: 0,
+      all_quality_free: 1,
+      download_privilege: 8
+    });
+
+    Object.assign(item, {
+      level: 0,
+      status: 1,
+      price: 0,
+      buy_count: 1,
+      pay_type: 0,
+      buy_count_audios: 1
+    });
+
+    item.relate_goods?.forEach(g => {
+      g.status = 1;
+      g.price = 0;
+      g.pay_type = 0;
+      g.popup = null;
+    });
+  }
+
+  if (json.userinfo) {
+    Object.assign(json.userinfo, {
+      m_type: 1,
+      vip_type: 6,
+      vip_user_type: 3,
+      quota_remain: 999
+    });
+  }
+
+  json.vip_user_type = 3;
+  json.appid_group = 0;
+
+  $.done({ body: JSON.stringify(json) });
+}
+
+/* ================= 去广告 ================= */
+
+else if (
+  url.includes('v1/mine_top_banner') ||
+  url.includes('v2/task_center_entrance')
+) {
+  let json = JSON.parse($response.body || '{}');
+  delete json.data?.ads;
+  $.done({ body: JSON.stringify(json) });
+}
+
+/* ================= VIP 提示 ================= */
+
+else if (
+  url.includes('vip/user/info') ||
+  url.includes('json/v3/vip/tip')
+) {
+  let json = JSON.parse($response.body || '{}');
+
+  Object.assign(json.data || {}, {
+    status: 1,
+    vipLevel: 9,
+    svip: 1,
+    expireTime: 4099737600000
+  });
+
+  if (json.data?.vipTips?.[0]) {
+    json.data.vipTips[0].btnText = '尊贵 SVIP 畅享所有特权';
+  }
+
+  $.done({ body: JSON.stringify(json) });
+}
+
+/* ================= 未命中 ================= */
+else{
+$.log('未匹配接口');
+$.done({});
+}
+
+
+
 
 function Env(a, b) {
   var c = Math.floor;
