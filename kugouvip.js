@@ -1,7 +1,7 @@
 /***********************************
  #!name= 酷狗音乐
  #!desc= 解锁会员及歌曲(支持MAC+IPAD+IOS端)
- #!date= 2026-04-03
+ #!date= 2026-04-23
 
  [Rule]
  # > (广告/弹窗)
@@ -26,7 +26,7 @@
 
  [Script]
  http-response ^https?:\/\/.*\.kugou\.com\/(v1|v2|v3|v5|mobile|media.store\/v1|adp\/ad\/v1|ads.gateway/v2|fxsing\/vip\/user|sing7\/homepage\/json\/v3\/vip)\/(login_by_token|get_my_info|get_login_extend_info|vipinfoV2|get_res_privilege\/lite|mine_top_banner|task_center_entrance|info|tip).* script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/kugouvip.js, requires-body=true, timeout=60, tag=酷狗
- http-response ^https?:\/\/.*\.kugou\.com\/(v5|tracker\/v5)\/url script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/refs/heads/main/kugouv5.js, requires-body=true, timeout=60, tag=酷狗V5
+ http-response ^https?:\/\/.*\.kugou\.com\/(v5|tracker\/v5)\/url script-path=https://raw.githubusercontent.com/chmg2025/script/refs/heads/main/kugouvip.js, requires-body=true, timeout=60, tag=酷狗V5
 
  [MITM]
  hostname = *.kugou.com
@@ -214,6 +214,25 @@ else if (
   $.done({ body: JSON.stringify(json) });
 }
 
+ /* ================= v5/url 直链 ================= */
+
+else if (url.includes('v5/url')) {
+  const hash = getQueryParam(url, 'hash');
+  if (!hash) $.done({});
+
+  const albumId = getQueryParam(url, 'album_id') || '';
+  const albumAudioId = getQueryParam(url, 'album_audio_id') || '';
+
+  let apiUrl = `https://kg.chmg2025.ip-ddns.com/?hash=${hash}`;
+  $.fetch(apiUrl).then(r => {
+    apiUrl = (JSON.parse(r.body)).url
+    $.fetch(apiUrl, {
+        headers: $request.headers
+    })
+        .then(r => $.done({body: r.body}))
+  }).catch(() => $.done({}));
+}
+ 
 /* ================= 未命中 ================= */
 else{
 $.log('未匹配接口');
