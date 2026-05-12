@@ -1,8 +1,8 @@
  #!name= 酷我音乐
  #!desc=  去除全局广告、解锁会员权限【最高无损】
+ #!date= 2026-05-11 11:44:31
  # > 脚本作者: 𝐎𝐍𝐙𝟑𝐕
  # > 脚本版本: 3.0.0
- #!date= 2026-05-11 11:44:31
  # > 频道地址: https://t.me/onz3v_channel
  # > 群组地址: https://t.me/onz3v_group
 
@@ -59,4 +59,4 @@ http-response ^https?:\/\/vip1\.kuwo\.cn\/commercia\/userAssets\/downloadCoupon\
 http-response ^https?:\/\/homepages\.kuwo\.cn(\.eo\.dnse1\.com)?\/mgxh\.s script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js, requires-body=true, timeout=60, tag=kuwo
 
 [MITM]
-hostname = *.kuwo.cn, ad.tencentmusic.com, abt-kuwo.tencentmusic.com
+hostname = %APPEND% *.kuwo.cn, ad.tencentmusic.com, abt-kuwo.tencentmusic.com
