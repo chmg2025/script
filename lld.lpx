@@ -1,0 +1,8 @@
+#!name=LLD
+#!desc=[去广告解锁vip及视频]【理论支持所有代理工具，具体自测】
+#!date=2026-07-07
+[Script]
+http-response ^https?:\/\/.+\/api\/(userinfo|setapp|newstartad|newreg|Get_vod_list).php script-path=https://loon.chmg.workers.dev/lld.js, requires-body=true, timeout=60, tag=LLD
+
+[MITM]
+hostname = *.cloudfront.net
