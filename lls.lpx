@@ -6,4 +6,4 @@
 http-response https:\/\/[^\/]+\.\d{6}\.xyz\/appapi\/detail\/appkey\/sJYnCWMyZAo00tImNvMKwUOngBL8dogP requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/lls.js, tag=拉拉社
 
 [Mitm]
-hostname = *.817924.xyz
+hostname = *.xyz
