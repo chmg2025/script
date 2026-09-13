@@ -1,0 +1,9 @@
+ #!name=LYS
+ #!desc=去广告解锁VIP视频
+ #!date=2026-09-13
+
+ [Script]
+ http-response https://oihawlma.00po.shop/api/app/(ping/domain/h5|mine/info|vid/info) script-path=https://raw.githubusercontent.com/chmg2025/js/refs/heads/main/lys.js, requires-body=true, timeout=60, tag=LYS
+
+ [MITM]
+ hostname = oihawlma.00po.shop
