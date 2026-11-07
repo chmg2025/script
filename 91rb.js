@@ -1,8 +1,7 @@
 // ==UserScript==
 // @name         91热爆
-// @namespace    https://tampermonkey.net/
-// @version      0.0.1
-// @description  解锁VIP视频测试
+// @version      1.0.0
+// @description  解锁VIP视频
 // @match        *://www.91rb.net/videos/*
 // @run-at       document-start
 // @grant        none
